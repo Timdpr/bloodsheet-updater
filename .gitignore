@@ -1,7 +1,3 @@
-
-.classpath
-.project
-
 ### Eclipse ###
 .metadata
 bin/
@@ -14,6 +10,8 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+.classpath
+.project
 
 ### Java ###
 *.class
