@@ -18,12 +18,13 @@ public class Main extends Application {
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("GPRO Bloodsheet Updater");
-			primaryStage.getIcons().addAll(        // JavaFX is bad at auto choosing icons
-					new Image("file:/logo16.png"), // So, many are given...
-					new Image("file:/logo32.png"),
-					new Image("file:/logo64.png"),
-					new Image("file:/logo256.png"),
-					new Image("file:/logo48.png")  // ...ending with 48x48 as a compromise
+			primaryStage.getIcons().addAll(
+			// JavaFX is bad at auto choosing icons, so, many are given, ending with 48x48 as a compromise:
+					new Image(getClass().getResourceAsStream("logo16.png")), 
+					new Image(getClass().getResourceAsStream("logo32.png")),
+					new Image(getClass().getResourceAsStream("logo64.png")),
+					new Image(getClass().getResourceAsStream("logo256.png")),
+					new Image(getClass().getResourceAsStream("logo48.png"))
 					); // Getting IllegalArgumentException when images in /res/, so in /src/ for now
 			primaryStage.getIcons().add(new Image("file:/logo48.png"));
 			primaryStage.setScene(scene);
