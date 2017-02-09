@@ -5,7 +5,7 @@ An application which automatically updates Quantum Force's 'Bloodsheet' tool wit
 
 ## Installation
 
-No need! Just download from [this link](http://testmediafirelink.com/) and run BloodsheetUpdater.exe
+No need! Just download from **[this link](http://testmediafirelink.com/)** and run BloodsheetUpdater.exe
 
 ## Usage
 
@@ -25,6 +25,14 @@ You may be understandably uneasy at having to enter your password! All I can say
 This is my first public application! There's bound to be plenty bugs and things I've overlooked, please let me know of any problems, comments or suggestions via GPRO....
 
 My code is thoroughly commented, and anyone learning Java, JavaFX, Apache POI, jsoup or HtmlUnit would probably find it handy to go through. If any experienced hands happen to go through it I would love to hear any critiques!
+
+## Built with
+
+*[JavaFX](docs.oracle.com/javafx/)
+*[HtmlUnit](http://htmlunit.sourceforge.net/)
+*[jsoup](https://jsoup.org/)
+*[Apache POI](https://poi.apache.org/)
+*[Launch4j](http://launch4j.sourceforge.net/)
 
 ## Licence
 
