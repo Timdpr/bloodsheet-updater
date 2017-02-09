@@ -1,3 +1,6 @@
+/*
+ * Tim Russell, 2017
+ */
 package application;
 	
 import javafx.application.Application;
