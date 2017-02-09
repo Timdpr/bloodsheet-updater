@@ -16,7 +16,7 @@ No need! Just download from **[this link](http://testmediafirelink.com/)** and r
 
 It will not update the track name or the Dry/Wet weather selection boxes. Make sure to do this yourself! The former may come in a later update, but the latter does not seem feasible considering the race weather can be a judgement call.
 
-It also assumes you have not placed any new sheets before 'Race Details', and the driver, car and weather cells are all in their usual places. (Correct order is (UNSHEET) - Welcome - Input - Race Details)
+It also assumes you have not placed any new sheets before 'Race Details', and the driver, car and weather cells are all in their usual places. (Correct order is [UNSHEET] - Welcome - Input - Race Details)
 
 ### Login?
 
