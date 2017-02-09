@@ -5,11 +5,12 @@ An application which automatically updates Quantum Force's 'Bloodsheet' tool wit
 
 ## Installation
 
-No need! Just download from **[this link](http://testmediafirelink.com/)** and run BloodsheetUpdater.exe
+No need! Just download from **[this link](http://www.mediafire.com/file/qbceytj9g9ah76h/BloodsheetUpdater.exe)** and run BloodsheetUpdater.exe
 
 ## Usage
 
 * Enter your GPRO username and password, select the Bloodsheet file you wish to update and hit 'Update'.
+
 * The tool will fetch your current driver and car attributes, as well as the weather details for the next race, then update the relevant cells in your Bloodsheet.
 
 ### What it doesn't do
