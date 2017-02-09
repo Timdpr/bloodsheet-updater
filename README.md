@@ -10,6 +10,7 @@ No need! Just download from **[this link](http://testmediafirelink.com/)** and r
 ## Usage
 
 * Enter your GPRO username and password, select the Bloodsheet file you wish to update and hit 'Update'.
+
 * The tool will fetch your current driver and car attributes, as well as the weather details for the next race, then update the relevant cells in your Bloodsheet.
 
 ### What it doesn't do
