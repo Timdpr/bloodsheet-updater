@@ -5,11 +5,11 @@ An application which automatically updates Quantum Force's 'Bloodsheet' tool wit
 
 ## Installation
 
-No need! Just download from **[this link](http://www.mediafire.com/file/qbceytj9g9ah76h/BloodsheetUpdater.exe)** and run BloodsheetUpdater.exe
+No need! Just download from **[this link](http://www.mediafire.com/file/47j07fy1u81t7t6/BloodsheetUpdater.exe)** and run BloodsheetUpdater.exe
 
 ## Usage
 
-* Enter your GPRO username and password, select the Bloodsheet file you wish to update and hit 'Update'.
+* Enter your GPRO username and password, select the Bloodsheet file you wish to update and hit 'Update'. Make sure you do not have your Bloodsheet open when you do this!
 
 * The tool will fetch your current driver and car attributes, as well as the weather details for the next race, then update the relevant cells in your Bloodsheet.
 
@@ -30,6 +30,10 @@ You may be understandably uneasy at having to enter your password! All I can say
 * As such, I recommend making a backup of your bloodsheet before using this tool, and checking it is giving you the correct values - though it is much more likely to fail completely than to update incorrectly.
 
 * My code is thoroughly commented, and anyone learning Java, JavaFX, Apache POI, jsoup or HtmlUnit would probably find it handy to go through. If any experienced hands happen to go through it I would love to hear any critiques!
+
+### Known issues
+
+Application freezes while working, preventing status messages (eg. "Fetching data...") from appearing. 
 
 ## Built with
 
