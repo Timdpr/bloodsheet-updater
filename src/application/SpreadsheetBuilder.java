@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFFormulaEvaluator;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -37,7 +38,12 @@ public class SpreadsheetBuilder {
 		    XSSFWorkbook bloodsheet = new XSSFWorkbook(bloodsheetInputFile);
 		    // Update and close input stream:
 		    updateRaceDetails(bloodsheet);
-		    updateInput(bloodsheet);			
+		    updateInput(bloodsheet);
+		    
+		    //XSSFFormulaEvaluator.evaluateAllFormulaCells(bloodsheet); // Refresh formulas
+		    //bloodsheet.getCreationHelper().createFormulaEvaluator().evaluateAll();
+		    bloodsheet.setForceFormulaRecalculation(true);
+		    
 		    bloodsheetInputFile.close();
             // Open FileOutputStream to write updates; close:
             FileOutputStream output_file = new FileOutputStream(this.chosenFile);

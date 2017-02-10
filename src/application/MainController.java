@@ -73,6 +73,7 @@ public class MainController {
 						  + "check your username, password or internet connection");
 			}
 		} catch (Exception e) {
+			e.printStackTrace();
 			updateLabel("Updating spreadsheet failed - "
 					  + "make sure you have selected your bloodsheet");
 			success = false;
