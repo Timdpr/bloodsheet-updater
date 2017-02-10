@@ -39,11 +39,7 @@ public class SpreadsheetBuilder {
 		    // Update and close input stream:
 		    updateRaceDetails(bloodsheet);
 		    updateInput(bloodsheet);
-		    
-		    //XSSFFormulaEvaluator.evaluateAllFormulaCells(bloodsheet); // Refresh formulas
-		    //bloodsheet.getCreationHelper().createFormulaEvaluator().evaluateAll();
-		    bloodsheet.setForceFormulaRecalculation(true);
-		    
+		    bloodsheet.setForceFormulaRecalculation(true); // Force formula recalculation on next open
 		    bloodsheetInputFile.close();
             // Open FileOutputStream to write updates; close:
             FileOutputStream output_file = new FileOutputStream(this.chosenFile);
