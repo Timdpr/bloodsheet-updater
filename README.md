@@ -31,6 +31,11 @@ You may be understandably uneasy at having to enter your password! All I can say
 
 * My code is thoroughly commented, and anyone learning Java, JavaFX, Apache POI, jsoup or HtmlUnit would probably find it handy to go through. If any experienced hands happen to go through it I would love to hear any critiques!
 
+### Future features
+
+* Update the track name, Q1 + Q2 weather and Technical Director stats.
+* Speed up web scraper by scraping car data from qualify page.
+
 ### Known issues
 
 Application freezes while working, preventing status messages (eg. "Fetching data...") from appearing. 
