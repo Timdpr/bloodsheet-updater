@@ -21,7 +21,7 @@ It also assumes you have not placed any new sheets before 'Race Details', and th
 
 ### Login?
 
-You may be understandably uneasy at having to enter your password! All I can say is the source code is ~500 lines long and freely available above, and the application does not store any data.
+You may be understandably uneasy at having to enter your password! All I can say is the source code is ~500 lines long and freely available to read above, and the application does not store any data.
 
 ## Notes
 
