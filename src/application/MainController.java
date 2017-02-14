@@ -66,6 +66,7 @@ public class MainController {
 				    updateLabel("Done!");
 			    }
 			} catch (NullPointerException e) {
+				e.printStackTrace();
 				updateLabel("Updating spreadsheet failed - "
 						  + "make sure your bloodsheet is not already open");
 			} catch (IndexOutOfBoundsException i) {
@@ -81,6 +82,7 @@ public class MainController {
 	}
 	
 	public void updateLabel(String labelText) {
+		
         statusLabel.setText(labelText);
 	}
 	

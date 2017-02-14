@@ -19,6 +19,7 @@ public class WebScraper {
 	private final WebClient WEB_CLIENT = new WebClient(BrowserVersion.CHROME);
 	private final String username;
     private final String password;
+    private String qualifyPage = "";
     
     WebScraper(String username, String password) {
     	this.username = username;
@@ -69,6 +70,7 @@ public class WebScraper {
     	try {
     	   	// Navigate to Qualify page:
         	String page = client.get("http://gpro.net/gb/Qualify.asp");
+        	this.qualifyPage = page; // Put page into qualifyPage for ...CarValues() to use
         	// Select all <td class="center"> elements:
     		Elements e = Jsoup.parse(page).select("td.center");
         	// Search for elements within tds above containing "Temp" (& humidity),
@@ -85,12 +87,28 @@ public class WebScraper {
     	}
     }
     
+    public ArrayList<Integer> newGetCarValues(WebScraper client) {
+    	Elements e = Jsoup.parse(this.qualifyPage).select("td.speccellnobot");
+    	e = e.select("td[align=center]");
+    	e = e.select("*:not([colspan])");
+    	
+    	String relevantElements = "";
+    	for (Element part : e) {
+    		String temp = part.getElementsContainingOwnText("td class").toString();
+    		System.out.println(temp);
+    		relevantElements += temp;
+    	}
+    	System.out.println(relevantElements);
+    	return newGetOrderedCarArrayFromString(relevantElements);
+    }
+    
     public ArrayList<Integer> getDriverValues(WebScraper client) {
     	// Returns: Array of the 12 driver values
     	String page = client.get("http://gpro.net/gb/TrainingSession.asp");
     	// Find td elements within table.squashed element:
     	Elements e = Jsoup.parse(page).select("table.squashed");
     	e = e.select("td");
+    	e = e.select("*:not([id])");
     	// Build relevantElements string only with td elements containing the
     	// driver attributes we want via (complex!) regex:
     	String relevantElements = "";
@@ -186,6 +204,10 @@ public class WebScraper {
         } carArray.addAll(tempArray);
         
     	return carArray;
+    }
+    
+    public ArrayList<Integer> newGetOrderedCarArrayFromString(String input) {
+    	return null;
     }
     
     public ArrayList<Integer> stringListToIntegerArray(String[] list) {
