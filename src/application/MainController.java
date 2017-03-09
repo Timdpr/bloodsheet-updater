@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-public class MainController {
+public class MainController extends Thread {
 	@FXML
 	private TextField usernameField;
 	@FXML
@@ -26,6 +26,17 @@ public class MainController {
 	private ArrayList<Integer> driverArray = new ArrayList<Integer>();
 	private ArrayList<Integer> carArray = new ArrayList<Integer>();
 	private File chosenFile;
+	
+	public void update() {
+		MainController mainController = new MainController();
+		mainController.start();
+	}
+	
+	public void run() {
+		// runs in a Thread...
+		// TODO: implement threads properly so UI does not hang during operation
+		startSpreadsheetBuilder();
+	}
 	
 	public void startWebScraper() {
 		// Get username and password from fields:
