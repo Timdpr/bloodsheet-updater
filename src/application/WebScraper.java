@@ -50,9 +50,11 @@ public class WebScraper {
         }
     }
     
+    /**
+     * @return HTML response for some URL
+     * Used to navigate to page after login
+     */
     public String get(String URL) {
-         // Simply returns the HTML response for some URL
-         // Used to navigate to page after login
         try {
             return WEB_CLIENT.getPage(URL).getWebResponse().getContentAsString();
         } catch (FailingHttpStatusCodeException e) {
@@ -64,8 +66,10 @@ public class WebScraper {
         } return null;
     }
     
+    /**
+     * @return Array of the 10 temps and 10 hums (in that order) for next race
+     */
     public ArrayList<Integer> getTempsAndHumidity(WebScraper client) {
-    	// Returns: Array of the 10 temps and 10 hums (in that order) for next race
     	try {
     	   	// Navigate to Qualify page:
         	String page = client.get("http://gpro.net/gb/Qualify.asp");
@@ -85,8 +89,10 @@ public class WebScraper {
     	}
     }
     
+    /**
+     * @return Array of the 12 driver values
+     */
     public ArrayList<Integer> getDriverValues(WebScraper client) {
-    	// Returns: Array of the 12 driver values
     	String page = client.get("http://gpro.net/gb/TrainingSession.asp");
     	// Find td elements within table.squashed element:
     	Elements e = Jsoup.parse(page).select("table.squashed");
@@ -104,8 +110,10 @@ public class WebScraper {
     	} return getOrderedDriverArrayFromString(relevantElements);
     }
     
+    /**
+     * @return Array of the 11 car level and 11 car wear values (in that order)
+     */
     public ArrayList<Integer> getCarValues(WebScraper client) {
-    	// Returns: Array of the 11 car level and 11 car wear values (in that order)
     	String page = client.get("http://gpro.net/gb/UpdateCar.asp");
     	Elements e = Jsoup.parse(page).select("table.styled");
     	e = e.select("td[align=center]");
@@ -188,9 +196,11 @@ public class WebScraper {
     	return carArray;
     }
     
+    /**
+     * @param String[]
+     * @return Input as ArrayList<Integer>
+     */
     public ArrayList<Integer> stringListToIntegerArray(String[] list) {
-    	// Input: String[]
-    	// Output: Input as ArrayList<Integer>
     	ArrayList<Integer> tempArray = new ArrayList<Integer>();
         for (String s : list) {
         	if (!(s.isEmpty())) {
