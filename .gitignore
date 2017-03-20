@@ -6,6 +6,7 @@ tmp/
 *.bak
 *.swp
 *~.nib
+*.launch
 local.properties
 .settings/
 .loadpath
